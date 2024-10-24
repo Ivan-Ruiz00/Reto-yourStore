@@ -1,0 +1,11 @@
+Conclusiones
+
+* Se evidenció que el patrón de diseño serenity permite mucho orden y buenas practicas con respecto al desarrollo de la prueba
+* Se decidió dejar los datos de los productos y la categoría en un archivo de excel para poder hacer cambios a futuro y no siempre
+repetir la misma prueba siempre que se ejecute sino que se pueda ir cambiando, para esto también habría que escalar la automatización
+pero se dejó un camino bastante labrado para esto
+* Durante las pruebas manuales para la automatización se encontraron defectos como que no todas las categorías encontradas en la barra
+de navegación dejan interactuar con ellas, o que la cantidad de productos aceptaba números negativos, mostrando un mensaje de que la
+operación había sido exitosa, por lo que se recomienda seguir con las pruebas
+* Se cumplió con lo solicitado con respecto a la documentación y se dejó buen espacio para mejora, tanto incremental como para los
+mantenimientos al seguir los principios SOLID, por lo que es un código altamente escalable
