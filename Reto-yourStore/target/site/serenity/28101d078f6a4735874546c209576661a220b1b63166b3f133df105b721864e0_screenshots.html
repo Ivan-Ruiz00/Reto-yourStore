@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="c5995fbe958b889a5d3f089264335254b4d282a1923aea154295855d21995e83.html">Purchase Of Producto</a></span>
+                > <span class="truncate-60"><a
+                    href="28101d078f6a4735874546c209576661a220b1b63166b3f133df105b721864e0.html"> </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 28-10-2024 14:33</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Purchase Of Producto </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a yourStore user<br />
+I want to buy few products<br />
+So that I can receive them
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given that the user is at the main page<br>When the user selects a "&lt;category&gt;"<br>And chooses "&lt;firstProduct&gt;" and "&lt;secondProduct&gt;"<br>And completes the checkout as a guest<br>Then the user should watch a confirmation message on the screen</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="20f867843a6eda9e2dc8799ff8587bcc8b10f8954e7d188f675c6a8d96dd02c3.png" title=" Example 1: {category=Phones, firstProduct=HTC Touch HD, secondProduct=iPhone}" width="1920"/>
+                <img src="20f867843a6eda9e2dc8799ff8587bcc8b10f8954e7d188f675c6a8d96dd02c3.png" title=" Given that the user is at the main page" width="1920"/>
+                <img src="20f867843a6eda9e2dc8799ff8587bcc8b10f8954e7d188f675c6a8d96dd02c3.png" title=" Ivan abrir pagina inicial" width="1920"/>
+                <img src="20f867843a6eda9e2dc8799ff8587bcc8b10f8954e7d188f675c6a8d96dd02c3.png" title=" Ivan opens the Pagina inicial" width="1920"/>
+                <img src="3f4f7ef3a829473d9ee871080d600e989e389a6b7b7c10a46098c3198d03db81.png" title=" Ivan opens the Pagina inicial (completed)" width="1920"/>
+                <img src="3f4f7ef3a829473d9ee871080d600e989e389a6b7b7c10a46098c3198d03db81.png" title=" Ivan abrir pagina inicial (completed)" width="1920"/>
+                <img src="3f4f7ef3a829473d9ee871080d600e989e389a6b7b7c10a46098c3198d03db81.png" title=" Given that the user is at the main page (completed)" width="1920"/>
+                <img src="3f4f7ef3a829473d9ee871080d600e989e389a6b7b7c10a46098c3198d03db81.png" title=" When the user selects a &quot;Phones&quot;" width="1920"/>
+                <img src="c396b1a3064dd3d14cd971c471e169ffe7590447643bc3d7694ec17b39d000e6.png" title=" Ivan clicks on Phones category" width="1920"/>
+                <img src="cc78eec91fb000af3594bd93926bffec7a5a3d2c237b9a950044683d1f5a1ed2.png" title=" Ivan clicks on Phones category (completed)" width="1920"/>
+                <img src="cc78eec91fb000af3594bd93926bffec7a5a3d2c237b9a950044683d1f5a1ed2.png" title=" When the user selects a &quot;Phones&quot; (completed)" width="1920"/>
+                <img src="cc78eec91fb000af3594bd93926bffec7a5a3d2c237b9a950044683d1f5a1ed2.png" title=" And chooses &quot;HTC Touch HD&quot; and &quot;iPhone&quot;" width="1920"/>
+                <img src="cc78eec91fb000af3594bd93926bffec7a5a3d2c237b9a950044683d1f5a1ed2.png" title=" Ivan clicks on Phone the user selected" width="1920"/>
+                <img src="935ec856716ebe93c30263824ff78bfd2fcdc65efe00f393c59053b9fe01cfc5.png" title=" Ivan clicks on Phone the user selected (completed)" width="1920"/>
+                <img src="b48e9baea6149ea3cbc5259906ac310238ec18d125fef5dd6c617fcd2a7e1688.png" title=" Ivan clicks on Button to add products to cart" width="1920"/>
+                <img src="0ddbaba83b92dcaf29787689d51bc6f948e7297295450801b28d0ffdc0a8d44a.png" title=" Ivan clicks on Button to add products to cart (completed)" width="1920"/>
+                <img src="c6be43089bb3507a2e1218bf44c73cce381ae23d837f5582cb45c837a1194954.png" title=" Ivan clicks on Phones category" width="1920"/>
+                <img src="6007d9b2376ea410f475efcba75a04d321fcb072aa9b00935d7aa74fc953f5b7.png" title=" Ivan clicks on Phones category (completed)" width="1920"/>
+                <img src="6007d9b2376ea410f475efcba75a04d321fcb072aa9b00935d7aa74fc953f5b7.png" title=" Ivan clicks on Phone the user selected" width="1920"/>
+                <img src="8223cf94db6dd95a3979fbf06651c21457270c44dabe56624c29b1b8cc738529.png" title=" Ivan clicks on Phone the user selected (completed)" width="1920"/>
+                <img src="2691a2b18259b92de3c10baf3a603a03a13c8ae101995453f2126079fc91cf18.png" title=" Ivan clicks on Button to add products to cart" width="1920"/>
+                <img src="03b2bdb009a164190b0b5ef06a36292775cf0fbe7133f9c838eab3b6ae3851d2.png" title=" Ivan clicks on Button to add products to cart (completed)" width="1920"/>
+                <img src="3f91c6103e0af8dc14951abd6088e5bb4308089f95ca3bee1dd914a828db895d.png" title=" And chooses &quot;HTC Touch HD&quot; and &quot;iPhone&quot; (completed)" width="1920"/>
+                <img src="3f91c6103e0af8dc14951abd6088e5bb4308089f95ca3bee1dd914a828db895d.png" title=" And completes the checkout as a guest" width="1920"/>
+                <img src="1ad1b6ee7c86e21320f8d33fe0f5bd9726db2fdd6531060c3d3d9cbe04cdabe3.png" title=" Ivan abrir carrito" width="1920"/>
+                <img src="1ad1b6ee7c86e21320f8d33fe0f5bd9726db2fdd6531060c3d3d9cbe04cdabe3.png" title=" Ivan clicks on Shopping cart" width="1920"/>
+                <img src="c9f0532e1868cf7eb507daeb5242172356baa9e46b965e06342333336997a93f.png" title=" Ivan clicks on Shopping cart (completed)" width="1920"/>
+                <img src="c9f0532e1868cf7eb507daeb5242172356baa9e46b965e06342333336997a93f.png" title=" Ivan abrir carrito (completed)" width="1920"/>
+                <img src="c9f0532e1868cf7eb507daeb5242172356baa9e46b965e06342333336997a93f.png" title=" Ivan ver carrito" width="1920"/>
+                <img src="c9f0532e1868cf7eb507daeb5242172356baa9e46b965e06342333336997a93f.png" title=" Ivan clicks on View the cart" width="1920"/>
+                <img src="c8a762ac72fccd37a9aae89661d333a1053e4dfa4950a7f63efa0c644a5f401a.png" title=" Ivan clicks on View the cart (completed)" width="1920"/>
+                <img src="c8a762ac72fccd37a9aae89661d333a1053e4dfa4950a7f63efa0c644a5f401a.png" title=" Ivan ver carrito (completed)" width="1920"/>
+                <img src="c8a762ac72fccd37a9aae89661d333a1053e4dfa4950a7f63efa0c644a5f401a.png" title=" Ivan click checkout" width="1920"/>
+                <img src="63a01c5ffa038d75e1de0ea703884f9fe854d5579fd90c613793fc58c5284764.png" title=" Ivan clicks on Checkout to finish the purchase process" width="1920"/>
+                <img src="c6a6f113fd62077c0d6b3fed207db262aee03db02166162ab2c349f9f8d665c9.png" title=" Ivan clicks on Checkout to finish the purchase process (completed)" width="1920"/>
+                <img src="c6a6f113fd62077c0d6b3fed207db262aee03db02166162ab2c349f9f8d665c9.png" title=" Ivan click checkout (completed)" width="1920"/>
+                <img src="c6a6f113fd62077c0d6b3fed207db262aee03db02166162ab2c349f9f8d665c9.png" title=" Ivan guest checkout" width="1920"/>
+                <img src="2e5fd4d314455c646381577829fb77fc4c56a4c92ff00c58d42968934412e35d.png" title=" Ivan clicks on Guest checkout option" width="1920"/>
+                <img src="7a2ad72250cd0759832084e315e289e12a886c7f6d58bfdcfd5491a0a29634b1.png" title=" Ivan clicks on Guest checkout option (completed)" width="1920"/>
+                <img src="7a2ad72250cd0759832084e315e289e12a886c7f6d58bfdcfd5491a0a29634b1.png" title=" Ivan clicks on Button to continue with the checkout" width="1920"/>
+                <img src="9372b5c8785359b0d862eefbe9c906299735a1ff5076f3eef5ebaf626f0a7d95.png" title=" Ivan clicks on Button to continue with the checkout (completed)" width="1920"/>
+                <img src="9372b5c8785359b0d862eefbe9c906299735a1ff5076f3eef5ebaf626f0a7d95.png" title=" Ivan guest checkout (completed)" width="1920"/>
+                <img src="f1d060354371c47c24ebc4590db20dae5e9bbfaf639246ffe05cb99d432f5359.png" title=" Ivan escribir nombre" width="1920"/>
+                <img src="f1d060354371c47c24ebc4590db20dae5e9bbfaf639246ffe05cb99d432f5359.png" title=" Ivan enters 'Juan' into Name into your personal details form" width="1920"/>
+                <img src="840dbfc7d7961107fc5e94bb4582e4ff5f9cf161f025880a2bacf592bd90668a.png" title=" Ivan enters 'Juan' into Name into your personal details form (completed)" width="1920"/>
+                <img src="840dbfc7d7961107fc5e94bb4582e4ff5f9cf161f025880a2bacf592bd90668a.png" title=" Ivan enters 'Gamboa' into Last name into your personal details form" width="1920"/>
+                <img src="f0ec20842cf6d3f0bc2b66b8e2f3fbd0608324df88881b0c007656bf5c804878.png" title=" Ivan enters 'Gamboa' into Last name into your personal details form (completed)" width="1920"/>
+                <img src="f0ec20842cf6d3f0bc2b66b8e2f3fbd0608324df88881b0c007656bf5c804878.png" title=" Ivan escribir nombre (completed)" width="1920"/>
+                <img src="84ba03bec5e63c990f1105490322f07259f2ac2c2562e04a7e2441650d1125d2.png" title=" Ivan escribir info contacto" width="1920"/>
+                <img src="84ba03bec5e63c990f1105490322f07259f2ac2c2562e04a7e2441650d1125d2.png" title=" Ivan enters 'j.gamboa@1mail.com' into Email into your personal details form" width="1920"/>
+                <img src="7655d6cc5b3c83e73e186dba3410e713050e9f27100a17c430382c411f2fecf0.png" title=" Ivan enters 'j.gamboa@1mail.com' into Email into your personal details form (completed)" width="1920"/>
+                <img src="7655d6cc5b3c83e73e186dba3410e713050e9f27100a17c430382c411f2fecf0.png" title=" Ivan enters '3401237654' into Phone number into your personal details form" width="1920"/>
+                <img src="0178d0bb27e557dd5a6cf5f81989e682518dc7e416b9bbd787dd7bbbb6d222e3.png" title=" Ivan enters '3401237654' into Phone number into your personal details form (completed)" width="1920"/>
+                <img src="2b1c75d52543a7ec755f95543411b16187da08fed626632ad8dfac8cb1bc0086.png" title=" Ivan escribir info contacto (completed)" width="1920"/>
+                <img src="2b1c75d52543a7ec755f95543411b16187da08fed626632ad8dfac8cb1bc0086.png" title=" Ivan escribir direccion" width="1920"/>
+                <img src="2b1c75d52543a7ec755f95543411b16187da08fed626632ad8dfac8cb1bc0086.png" title=" Ivan enters 'Casa 10' into Address into your personal details form" width="1920"/>
+                <img src="94a58fb6b88fd2f021427b2611c16c5e2fdbd20cc240b9e400e2f469dd24ec2a.png" title=" Ivan enters 'Casa 10' into Address into your personal details form (completed)" width="1920"/>
+                <img src="94a58fb6b88fd2f021427b2611c16c5e2fdbd20cc240b9e400e2f469dd24ec2a.png" title=" Ivan enters 'Milan' into City into your personal details form" width="1920"/>
+                <img src="9b6543662564cdbe70318a2be01283ccb1da0a7b1c7e7a0d332065683f246c2a.png" title=" Ivan enters 'Milan' into City into your personal details form (completed)" width="1920"/>
+                <img src="9b6543662564cdbe70318a2be01283ccb1da0a7b1c7e7a0d332065683f246c2a.png" title=" Ivan enters '12784' into Postal code into your personal details form" width="1920"/>
+                <img src="a32b4b50533cee3b97c1b476e34b2d0144310f883484f1f25144b0235dbd8103.png" title=" Ivan enters '12784' into Postal code into your personal details form (completed)" width="1920"/>
+                <img src="a32b4b50533cee3b97c1b476e34b2d0144310f883484f1f25144b0235dbd8103.png" title=" Ivan clicks on Country into your personal details form" width="1920"/>
+                <img src="4c2a2ea83a5bd3b798d03965344678ae15c17086ccad5a82b68dff3cf3c38fae.png" title=" Ivan clicks on Country into your personal details form (completed)" width="1920"/>
+                <img src="4c2a2ea83a5bd3b798d03965344678ae15c17086ccad5a82b68dff3cf3c38fae.png" title=" Ivan clicks on Option selected on the list of countries" width="1920"/>
+                <img src="fefd0b982a052f8677add1c7f54190eb3c44a9e597169041d7b000ef9b6dfe86.png" title=" Ivan clicks on Option selected on the list of countries (completed)" width="1920"/>
+                <img src="fefd0b982a052f8677add1c7f54190eb3c44a9e597169041d7b000ef9b6dfe86.png" title=" Ivan clicks on Region or state in the country previously selected" width="1920"/>
+                <img src="23b4c1c792ba54e55000e611be2e9daa91431ffd6af2b50c54fbf38ce31cc189.png" title=" Ivan clicks on Region or state in the country previously selected (completed)" width="1920"/>
+                <img src="23b4c1c792ba54e55000e611be2e9daa91431ffd6af2b50c54fbf38ce31cc189.png" title=" Ivan clicks on Option selected on the list of regions or states" width="1920"/>
+                <img src="c03aa656431c46a40e29d714cb16d9f19c4149cbe51cb76327f3c09976d7cfd7.png" title=" Ivan clicks on Option selected on the list of regions or states (completed)" width="1920"/>
+                <img src="c03aa656431c46a40e29d714cb16d9f19c4149cbe51cb76327f3c09976d7cfd7.png" title=" Ivan clicks on The button that allow us to continue after filling the information form" width="1920"/>
+                <img src="70ff8716673ccc8bc68acbd281c9aa6e92647d4a91c40fe7a095f111eb9ee55b.png" title=" Ivan clicks on The button that allow us to continue after filling the information form (completed)" width="1920"/>
+                <img src="70ff8716673ccc8bc68acbd281c9aa6e92647d4a91c40fe7a095f111eb9ee55b.png" title=" Ivan escribir direccion (completed)" width="1920"/>
+                <img src="ee0f0134c8cfe07b639bf4df9dca4bfb10d41f62ce5c1b2b4b3e5701751724c0.png" title=" Ivan escribir info pago" width="1920"/>
+                <img src="613c74883999ef6558b973d085f412bcf7fff0f491107d52a0ca0c1b48b175a6.png" title=" Ivan clicks on Button to end the delivery part of the purchase" width="1920"/>
+                <img src="02a6c89a0cf536b81b65b47d140ad7356afc96447bab1f351934508fc81a310d.png" title=" Ivan clicks on Button to end the delivery part of the purchase (completed)" width="1920"/>
+                <img src="bb216c938b65edfa5a4398fd1641a206e557000d53753d32116de4c56b72bca9.png" title=" Ivan clicks on Checbox to say you have already read and agreed to their terms and conditions" width="1920"/>
+                <img src="162a3337577338bfe9a45219277349d2d25df2489d31511c5f064aa626f83522.png" title=" Ivan clicks on Checbox to say you have already read and agreed to their terms and conditions (completed)" width="1920"/>
+                <img src="162a3337577338bfe9a45219277349d2d25df2489d31511c5f064aa626f83522.png" title=" Ivan clicks on Button to finish the process, only remains to confirm" width="1920"/>
+                <img src="dcac7b85fef90e7278a8889f34763e52fb3b083651c0806ede20a9b1b55ad1fa.png" title=" Ivan clicks on Button to finish the process, only remains to confirm (completed)" width="1920"/>
+                <img src="6ba2ceb32a768bb34cf95f7d6a58ac48557af9be52711a53a3cd365ac2b669b8.png" title=" Ivan clicks on Button to confirm the purchase" width="1920"/>
+                <img src="e96cca7a467f06a245df5cd0f2a849d8b93513de882bd8ad171c976cb76ae00d.png" title=" Ivan clicks on Button to confirm the purchase (completed)" width="1920"/>
+                <img src="e96cca7a467f06a245df5cd0f2a849d8b93513de882bd8ad171c976cb76ae00d.png" title=" Ivan escribir info pago (completed)" width="1920"/>
+                <img src="fea023c9b04e3ff6869a97d8c0a99839448388208282dafe6f0135196139be94.png" title=" And completes the checkout as a guest (completed)" width="1920"/>
+                <img src="fea023c9b04e3ff6869a97d8c0a99839448388208282dafe6f0135196139be94.png" title=" Then the user should watch a confirmation message on the screen" width="1920"/>
+                <img src="fea023c9b04e3ff6869a97d8c0a99839448388208282dafe6f0135196139be94.png" title=" Then mensaje confirmacion should be 'Your order has been placed!'" width="1920"/>
+                <img src="fea023c9b04e3ff6869a97d8c0a99839448388208282dafe6f0135196139be94.png" title=" Example 1: {category=Phones, firstProduct=HTC Touch HD, secondProduct=iPhone} (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.3.0</span>
+</div>
+</body>
+</html>
